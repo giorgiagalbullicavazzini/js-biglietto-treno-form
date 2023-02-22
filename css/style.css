@@ -22,8 +22,6 @@ body {
 
 main {
   align-items: center;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   justify-content: center;
 }
@@ -34,7 +32,6 @@ section {
 
 .container {
   background-color: #ffffff;
-  height: 100px;
 }
 
 /*
@@ -43,9 +40,36 @@ Common
 ==============
 */
 
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 h2 {
   color: white;
   margin-bottom: .9375rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+/*
+==============
+Form
+==============
+*/
+
+.user-inputs {
+  justify-content: center;
+}
+
+.user-inputs > * {
+  text-align: center;
+  width: 30%;
+}
+
+.buttons {
+  text-align: center;
 }
