@@ -7,8 +7,11 @@ const basePrice = 0.21;
 const minorSale = 0.8;
 const overSale = 0.6;
 
+const ticket = document.getElementById('ticket-container');
+
 // Inserisco un bottone che, al click, esegue una funzione anonima che mi restituisce il valore totale del biglietto in console;
 const button = document.getElementById('button');
+const reset = document.getElementById('reset');
 
 button.addEventListener('click',
   function() {
@@ -30,4 +33,11 @@ button.addEventListener('click',
 
     // Per fornire un output in forma umana, il numero ricavato dovrà contenere un massimo di due decimali che indicheranno i centesimi da pagare per il biglietto.
     console.log(passengerDistance, passengerAge, ticketPrice.toFixed(2));
+
+    ticket.classList.remove('hidden');
 });
+
+reset.addEventListener('click',
+  function() {
+    ticket.classList.add('hidden');
+  })
