@@ -15,16 +15,16 @@ button.addEventListener('click',
     // Tramite l'utilizzo di due input, chiedo all'utente quanti chilometri deve percorrere il passeggero e quanti anni ha
     // Inserisco i due valori in altrettante variabili e, dal momento che gli input vengono forniti in formato stringa, li trasformo in numeri
     const passengerDistance = Number(document.getElementById('passenger-distance').value);
-    const passengerAge = Number(document.getElementById('passenger-age').value);
+    const passengerAge = document.getElementById('passenger-age').value;
 
     // Moltiplico la variabile del prezzo per il numero di chilometri da percorrere e ottengo così il prezzo intero del biglietto;
     let ticketPrice = basePrice * passengerDistance;
 
     // SE il passeggero è minorenne, applico la variabile dello sconto del 20% (prezzo intero * 0.8);
     // SE il passeggero è over 65, applico invece la variabile dello sconto del 40% (prezzo intero * 0.6);
-    if (passengerAge < 18) {
+    if (passengerAge === 'minor') {
       ticketPrice *= minorSale;
-    } else if (passengerAge >= 65) {
+    } else if (passengerAge === 'over') {
       ticketPrice *= overSale;
     };
 

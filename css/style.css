@@ -90,9 +90,11 @@ Form
   margin-bottom: 1.25rem;
 }
 
-.user-inputs input {
+.user-inputs input,
+.user-inputs select {
   border: 1px solid var(--main-color);
   border-radius: .3125rem;
+  height: 1.875rem;
   padding: .3125rem .625rem;
 }
 
