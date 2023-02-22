@@ -43,13 +43,17 @@ button.addEventListener('click',
     console.log(passengerName, passengerDistance, passengerAge, ticketPrice.toFixed(2));
 
     // Cliccando sul pulsante "Genera", compare il ticket generato dall'utente;
-    ticket.classList.remove('hidden');
+    if (passengerName !== '' && passengerDistance !== 0 && passengerAge !== '') {
+      ticket.classList.remove('hidden');
 
-    document.getElementById('ticket-name').innerHTML = passengerName;
-    document.getElementById('ticket-type').innerHTML = ticketType;
-    document.getElementById('ticket-coach').innerHTML = Math.floor(Math.random() * 9) + 1;
-    document.getElementById('ticket-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
-    document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
+      document.getElementById('ticket-name').innerHTML = passengerName;
+      document.getElementById('ticket-type').innerHTML = ticketType;
+      document.getElementById('ticket-coach').innerHTML = Math.floor(Math.random() * 9) + 1;
+      document.getElementById('ticket-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
+      document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
+    } else {
+        alert('Compila tutti i campi!');
+    };
 });
 
 // Cliccando sul pulsante "Annulla", scompare il ticket generato dall'utente;
