@@ -1,5 +1,3 @@
-// - Il valore base del biglietto è di €0.21 al km, quindi assegno questo valore a un'altra variabile;
-// - Moltiplico la variabile del prezzo per il numero di chilometri da percorrere e ottengo così il prezzo intero del biglietto;
 // - Creo altre due variabili per gli sconti a minorenni (0.8) e over 65 (0.6);
 // - SE il passeggero è minorenne, applico la variabile dello sconto del 20% (prezzo intero * 0.8);
 // - SE il passeggero è over 65, applico invece la variabile dello sconto del 40% (prezzo intero * 0.6);
@@ -16,4 +14,10 @@
 const passengerDistance = Number(document.getElementById('passenger-distance').value);
 const passengerAge = Number(document.getElementById('passenger-age').value);
 
-console.log(passengerDistance, passengerAge);
+// - Il valore base del biglietto è di €0.21 al km, quindi assegno questo valore a un'altra variabile;
+const basePrice = 0.21;
+
+// - Moltiplico la variabile del prezzo per il numero di chilometri da percorrere e ottengo così il prezzo intero del biglietto;
+const ticketPrice = basePrice * passengerDistance;
+
+console.log(ticketPrice);
