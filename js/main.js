@@ -17,7 +17,7 @@ const button = document.getElementById('button');
 const reset = document.getElementById('reset');
 
 button.addEventListener('click',
-  function() {
+  function () {
     // Tramite l'utilizzo di tre input, chiedo all'utente il nome del passeggero, quanti chilometri deve percorrere e quanti anni ha
     // Inserisco i tre valori in altrettante variabili e, dal momento che gli input vengono forniti in formato stringa, trasformo la distanza in numero
     const passengerName = document.getElementById('passenger-name').value;
@@ -52,12 +52,12 @@ button.addEventListener('click',
       document.getElementById('ticket-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
       document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
     } else {
-        alert('Compila tutti i campi!');
+      alert('Compila tutti i campi!');
     };
-});
+  });
 
 // Cliccando sul pulsante "Annulla", scompare il ticket generato dall'utente;
 reset.addEventListener('click',
-  function() {
+  function () {
     ticket.classList.add('hidden');
-  })
+  });
