@@ -44,13 +44,13 @@ button.addEventListener('click',
 
     // Cliccando sul pulsante "Genera", compare il ticket generato dall'utente;
     if (passengerName !== '' && passengerDistance !== 0 && passengerAge !== '') {
-      ticket.classList.remove('hidden');
-
       document.getElementById('ticket-name').innerHTML = passengerName;
       document.getElementById('ticket-type').innerHTML = ticketType;
       document.getElementById('ticket-coach').innerHTML = Math.floor(Math.random() * 9) + 1;
       document.getElementById('ticket-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
       document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
+
+      ticket.classList.remove('hidden');
     } else {
       alert('Compila tutti i campi!');
     };
