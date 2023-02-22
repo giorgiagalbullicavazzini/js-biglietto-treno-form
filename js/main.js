@@ -18,8 +18,9 @@ const reset = document.getElementById('reset');
 
 button.addEventListener('click',
   function() {
-    // Tramite l'utilizzo di due input, chiedo all'utente quanti chilometri deve percorrere il passeggero e quanti anni ha
-    // Inserisco i due valori in altrettante variabili e, dal momento che gli input vengono forniti in formato stringa, li trasformo in numeri
+    // Tramite l'utilizzo di tre input, chiedo all'utente il nome del passeggero, quanti chilometri deve percorrere e quanti anni ha
+    // Inserisco i tre valori in altrettante variabili e, dal momento che gli input vengono forniti in formato stringa, trasformo la distanza in numero
+    const passengerName = document.getElementById('passenger-name').value;
     const passengerDistance = Number(document.getElementById('passenger-distance').value);
     const passengerAge = document.getElementById('passenger-age').value;
 
@@ -28,17 +29,27 @@ button.addEventListener('click',
 
     // SE il passeggero è minorenne, applico la variabile dello sconto del 20% (prezzo intero * 0.8);
     // SE il passeggero è over 65, applico invece la variabile dello sconto del 40% (prezzo intero * 0.6);
+    let ticketType = 'Biglietto Standard';
+
     if (passengerAge === 'minor') {
       ticketPrice *= minorSale;
+      ticketType = 'Biglietto Ridotto';
     } else if (passengerAge === 'over') {
       ticketPrice *= overSale;
+      ticketType = 'Biglietto Silver';
     };
 
     // Per fornire un output in forma umana, il numero ricavato dovrà contenere un massimo di due decimali che indicheranno i centesimi da pagare per il biglietto.
-    console.log(passengerDistance, passengerAge, ticketPrice.toFixed(2));
+    console.log(passengerName, passengerDistance, passengerAge, ticketPrice.toFixed(2));
 
     // Cliccando sul pulsante "Genera", compare il ticket generato dall'utente;
     ticket.classList.remove('hidden');
+
+    document.getElementById('ticket-name').innerHTML = passengerName;
+    document.getElementById('ticket-type').innerHTML = ticketType;
+    document.getElementById('ticket-coach').innerHTML = Math.floor(Math.random() * 9) + 1;
+    document.getElementById('ticket-code').innerHTML = Math.floor(Math.random() * 90000) + 10000;
+    document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
 });
 
 // Cliccando sul pulsante "Annulla", scompare il ticket generato dall'utente;
