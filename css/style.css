@@ -12,12 +12,24 @@ Reset
 
 /*
 ==============
+Var
+==============
+*/
+
+:root {
+  --main-color: #b91450;
+  --second-color: #ffffff;
+  --third-color: #000000;
+}
+
+/*
+==============
 Container
 ==============
 */
 
 body {
-  background-color: #b91450;
+  background-color: var(--main-color);
 }
 
 main {
@@ -27,11 +39,17 @@ main {
 }
 
 section {
-  width: 60%;
+  width: 50%;
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: var(--second-color);
+}
+
+#form-container .container {
+  border-radius: .9375rem;
+  color: var(--main-color);
+  padding: 1.25rem 9.375rem;
 }
 
 /*
@@ -39,6 +57,10 @@ section {
 Common
 ==============
 */
+
+.text-center {
+  text-align: center;
+}
 
 .flex {
   display: flex;
@@ -49,9 +71,8 @@ Common
 }
 
 h2 {
-  color: white;
+  color: var(--second-color);
   margin-bottom: .9375rem;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -62,14 +83,28 @@ Form
 */
 
 .user-inputs {
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.user-inputs > * {
-  text-align: center;
-  width: 30%;
+.user-inputs label {
+  margin-bottom: 1.25rem;
+}
+
+.user-inputs input {
+  border: 1px solid var(--main-color);
+  border-radius: .3125rem;
+  padding: .3125rem .625rem;
 }
 
 .buttons {
-  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.buttons button {
+  background-color: #cccccc;
+  border: 1px solid #808080;
+  border-radius: .3125rem;
+  color: var(--main-color);
+  font-family: inherit;
+  padding: .3125rem;
 }
