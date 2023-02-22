@@ -36,12 +36,12 @@ body {
 
 main {
   align-items: center;
-  height: 100vh;
   padding-top: 3.125rem;
 }
 
 section {
-  width: 50%;
+  max-width: 1000px;
+  width: 80%;
 }
 
 .container {
@@ -52,7 +52,7 @@ section {
   border-radius: .9375rem;
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
   color: var(--main-color);
-  padding: 1.25rem 9.375rem;
+  padding: 1.25rem 2.5rem;
 }
 
 #ticket-container {
@@ -121,7 +121,7 @@ Form
 }
 
 .user-inputs label {
-  margin-bottom: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .user-inputs input,
@@ -129,7 +129,7 @@ Form
   border: 1px solid var(--main-color);
   border-radius: .3125rem;
   font-family: inherit;
-  height: 1.875rem;
+  height: 2.1875rem;
   padding: .3125rem .625rem;
 }
 
@@ -217,4 +217,16 @@ Ticket
 
 .ticket-info table td {
   padding-top: 40px;
+}
+
+/*
+==============
+Responsive
+==============
+*/
+
+@media screen and (min-width: 992px) {
+  .user-inputs {
+    flex-direction: row;
+  }
 }
