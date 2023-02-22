@@ -20,6 +20,7 @@ Var
   --main-color: #b91450;
   --second-color: #ffffff;
   --third-color: #000000;
+  --side-color: #808080;
 }
 
 /*
@@ -52,6 +53,14 @@ section {
   padding: 1.25rem 9.375rem;
 }
 
+#ticket-container {
+  margin-top: 2.5rem;
+}
+
+#ticket-container .container {
+  padding: 1.25rem;
+}
+
 /*
 ==============
 Common
@@ -70,10 +79,17 @@ Common
   flex-direction: column;
 }
 
-h2 {
-  color: var(--second-color);
+.hidden {
+  display: none;
+}
+
+h2, h3, h4 {
   margin-bottom: .9375rem;
   text-transform: uppercase;
+}
+
+h2 {
+  color: var(--second-color);
 }
 
 /*
@@ -104,9 +120,36 @@ Form
 
 .buttons button {
   background-color: #cccccc;
-  border: 1px solid #808080;
+  border: 1px solid var(--side-color);
   border-radius: .3125rem;
   color: var(--main-color);
   font-family: inherit;
   padding: .3125rem;
+}
+
+/*
+==============
+Ticket
+==============
+*/
+
+.ticket-name {
+  background-color: var(--side-color);
+  padding: 1.25rem;
+}
+
+.ticket-info {
+  border: 1px solid var(--side-color);
+  border-right: none;
+  flex-grow: 1;
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.ticket-info table {
+  width: 100%;
+}
+
+.ticket-info table td {
+  padding-top: 40px;
 }
