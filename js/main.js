@@ -1,5 +1,3 @@
-// Realizzo un form completo in cui l'utente può inserire tutti i dati e visualizzare il prezzo finale con relativo biglietto;
-
 'use strict';
 
 // Il valore base del biglietto è di €0.21 al km, quindi assegno questo valore a un'altra variabile;
