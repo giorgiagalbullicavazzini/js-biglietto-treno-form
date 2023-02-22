@@ -1,5 +1,4 @@
 // - Realizzo un form completo in cui l'utente può inserire tutti i dati e visualizzare il prezzo finale con relativo biglietto;
-// - Per fornire un output in forma umana, il numero ricavato dovrà contenere un massimo di due decimali che indicheranno i centesimi da pagare per il biglietto.
 
 'use strict';
 
@@ -31,5 +30,6 @@ button.addEventListener('click',
       ticketPrice *= overSale;
     };
 
-    console.log(passengerDistance, passengerAge, ticketPrice);
+    // - Per fornire un output in forma umana, il numero ricavato dovrà contenere un massimo di due decimali che indicheranno i centesimi da pagare per il biglietto.
+    console.log(passengerDistance, passengerAge, ticketPrice.toFixed(2));
 });
