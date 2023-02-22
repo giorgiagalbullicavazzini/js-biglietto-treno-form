@@ -21,7 +21,7 @@ button.addEventListener('click',
     // Tramite l'utilizzo di tre input, chiedo all'utente il nome del passeggero, quanti chilometri deve percorrere e quanti anni ha
     // Inserisco i tre valori in altrettante variabili e, dal momento che gli input vengono forniti in formato stringa, trasformo la distanza in numero
     const passengerName = document.getElementById('passenger-name').value;
-    const passengerDistance = Number(document.getElementById('passenger-distance').value);
+    const passengerDistance = document.getElementById('passenger-distance').value;
     const passengerAge = document.getElementById('passenger-age').value;
 
     // Moltiplico la variabile del prezzo per il numero di chilometri da percorrere e ottengo così il prezzo intero del biglietto;

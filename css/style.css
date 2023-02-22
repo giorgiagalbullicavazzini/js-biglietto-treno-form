@@ -85,6 +85,12 @@ Common
   display: none;
 }
 
+/*
+==============
+Typo
+==============
+*/
+
 h2 {
   color: var(--second-color);
   font-size: 1.875rem;
@@ -135,6 +141,34 @@ Form
   font-weight: bold;
 }
 
+.user-inputs input:focus-visible,
+.user-inputs select:focus-visible {
+  background-color: var(--main-color);
+  outline: none;
+  color: var(--second-color);
+}
+
+.user-inputs select {
+  position: relative;
+}
+
+.user-inputs select option {
+  background-color: rgb(101,57,74);
+}
+
+.user-inputs input:focus-visible::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--second-color);
+  opacity: 1; /* Firefox */
+}
+
+.user-inputs input:focus-visible:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--second-color);
+}
+
+.user-inputs input:focus-visible::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--second-color);
+}
+
 .buttons {
   margin-top: 2.5rem;
 }
@@ -150,6 +184,12 @@ Form
 
 .buttons button:first-of-type {
   margin-right: 1.25rem;
+}
+
+.buttons button:hover {
+  background-color: var(--side-color);
+  color: var(--second-color);
+  cursor: pointer;
 }
 
 /*
