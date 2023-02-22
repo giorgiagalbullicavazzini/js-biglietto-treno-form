@@ -1,8 +1,20 @@
+/*
+==============
+Reset
+==============
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/*
+==============
+Container
+==============
+*/
 
 body {
   background-color: #b91450;
@@ -16,9 +28,24 @@ main {
   justify-content: center;
 }
 
+section {
+  width: 60%;
+}
+
 .container {
   background-color: #ffffff;
-  border: 2px solid black;
   height: 100px;
-  width: 60%;
+}
+
+/*
+==============
+Common
+==============
+*/
+
+h2 {
+  color: white;
+  margin-bottom: .9375rem;
+  text-align: center;
+  text-transform: uppercase;
 }
