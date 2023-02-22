@@ -50,6 +50,7 @@ section {
 
 #form-container .container {
   border-radius: .9375rem;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
   color: var(--main-color);
   padding: 1.25rem 9.375rem;
 }
