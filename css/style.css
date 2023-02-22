@@ -31,6 +31,7 @@ Container
 
 body {
   background-color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -110,6 +111,7 @@ Form
 .user-inputs select {
   border: 1px solid var(--main-color);
   border-radius: .3125rem;
+  font-family: inherit;
   height: 1.875rem;
   padding: .3125rem .625rem;
 }
