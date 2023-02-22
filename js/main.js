@@ -7,10 +7,13 @@ const basePrice = 0.21;
 const minorSale = 0.8;
 const overSale = 0.6;
 
+// Creo una variabile per identificare il codice html del biglietto;
 const ticket = document.getElementById('ticket-container');
 
 // Inserisco un bottone che, al click, esegue una funzione anonima che mi restituisce il valore totale del biglietto in console;
 const button = document.getElementById('button');
+
+// Inserisco un altro bottone che identifica il pulsante di reset del form;
 const reset = document.getElementById('reset');
 
 button.addEventListener('click',
@@ -34,9 +37,11 @@ button.addEventListener('click',
     // Per fornire un output in forma umana, il numero ricavato dovrà contenere un massimo di due decimali che indicheranno i centesimi da pagare per il biglietto.
     console.log(passengerDistance, passengerAge, ticketPrice.toFixed(2));
 
+    // Cliccando sul pulsante "Genera", compare il ticket generato dall'utente;
     ticket.classList.remove('hidden');
 });
 
+// Cliccando sul pulsante "Annulla", scompare il ticket generato dall'utente;
 reset.addEventListener('click',
   function() {
     ticket.classList.add('hidden');
