@@ -255,4 +255,8 @@ Responsive
   .ticket {
     flex-direction: row;
   }
+
+  .ticket-info {
+    border-right: none;
+  }
 }
