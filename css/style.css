@@ -56,7 +56,7 @@ section {
 }
 
 #ticket-container {
-  margin-top: 2.5rem;
+  margin: 2.5rem 0;
 }
 
 #ticket-container .container {
@@ -205,7 +205,6 @@ Ticket
 
 .ticket-info {
   border: 1px solid var(--side-color);
-  border-right: none;
   flex-grow: 1;
   padding: 1.25rem;
   text-align: left;
@@ -215,8 +214,28 @@ Ticket
   width: 100%;
 }
 
+.ticket-info table tr {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+}
+
+.ticket-info table th:first-of-type {
+  margin-bottom: 1.1875rem;
+}
+
 .ticket-info table td {
-  padding-top: 40px;
+  margin-left: .625rem;
+}
+
+.ticket-info table th:not(:last-of-type),
+.ticket-info table td:not(:last-of-type) {
+  padding-bottom: 1.25rem;
+}
+
+.ticket-info table th,
+.ticket-info table td {
+  display: block;
 }
 
 /*
@@ -225,8 +244,15 @@ Responsive
 ==============
 */
 
+@media screen and (min-width: 452px) {
+  .ticket-info table th:first-of-type {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 992px) {
-  .user-inputs {
+  .user-inputs,
+  .ticket {
     flex-direction: row;
   }
 }
